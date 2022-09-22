@@ -1,0 +1,26 @@
+<div class="listado container">
+    <br>
+    <table class="table">
+        <thead >
+          <tr class="titulosTabla">
+            <th scope="col">ID</th>
+            <th scope="col">PLAN</th>
+            <th scope="col">TNA</th>
+            <th scope="col">DURACION MINIMA CUOTAS</th>
+          </tr>
+        </thead>
+        <tbody >
+          
+
+         <tr *ngFor="let plan of planesService.planesList">
+            <th scope="row"> {{plan.id}} </th>
+            <td class="nombreCompleto"> {{plan.nombre}}</td>
+            <td>{{plan.tna}}</td>
+            <td>{{plan.duracionMinimaCuotas}} </td>
+         </tr>
+          
+
+        </tbody>
+
+      </table>
+</div>
