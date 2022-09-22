@@ -7,12 +7,11 @@ import { Plan } from '../model/plan';
   providedIn: 'root'
 })
 export class PlanesService {
-    planesList: Array <any>=[]
+    planesList: Plan[]
     uri: string= 'https://citenik-nodocker.azurewebsites.net/api/planes'
 
   constructor(public http:HttpClient) { 
     this.planesList=[]
-
   }
   
 

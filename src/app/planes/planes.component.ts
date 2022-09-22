@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { PlanesService } from '../services/planes.service';
 import { Subscription } from 'rxjs';
 import { Plan } from '../model/plan';
+import { PlanesService } from '../services/planes.service';
 
 @Component({
   selector: 'app-planes',
@@ -13,14 +13,9 @@ export class PlanesComponent implements OnInit, OnDestroy {
   planElegido:any;
   private subs:Subscription;
 
-  planesList: Array <any>=[]
-
   constructor(public planesService: PlanesService) {
     this.subs=new Subscription()
-    
   }
-
-
 
   ngOnInit(): void {
     this.subs.add(
@@ -40,27 +35,18 @@ export class PlanesComponent implements OnInit, OnDestroy {
   }
 
   borrarPlan(plan: Plan) {
-    // if (confirm('esta seguro de borrar plan')) {
-    //   this.subs.add(
-    //     this.planesService.delete(plan.id).subscribe({
-    //       next: (result) => {
-    //         console.log(result);
-    //       },
-    //       error: (err) => {
-    //         console.log(err.status);
-    //       },
-    //     })
-    //   );
-    // }
-    this.planesService.delete(plan.id).subscribe({
-      next: (result) => {
-        console.log(result);
-      },
-      error: (err) => {
-        console.log(err.status);
-      },
-    })
+    if (confirm('esta seguro de borrar el plan')) {
+      this.subs.add(
+        this.planesService.delete(plan.id).subscribe({
+          next: (result) => {
+            console.log(result);
+          },
+          error: (err) => {
+            console.log(err.status);
+          },
+        })
+      );
+    }
   }
-
 }
 

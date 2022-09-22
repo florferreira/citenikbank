@@ -17,8 +17,8 @@ import { LoginComponent } from './login/login.component';
     AltaPersonaComponent,
     ListaPersonasComponent,
     PlanesComponent,
-    LoginComponent,
-    PlanesComponent
+    LoginComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -29,6 +29,7 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
       })
     );
   }
+  
   ngOnDestroy() {
     this.subs.unsubscribe();
   }
