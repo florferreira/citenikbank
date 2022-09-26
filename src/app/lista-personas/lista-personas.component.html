@@ -9,7 +9,7 @@
             <th>activo</th>
             <th></th>
         </tr>
-        <tr  *ngFor="let item of personaServe.plantel">
+        <tr  *ngFor="let item of personaServe.plantel | paginate:{ itemsPerPage:20,currentPage:page}" >
             <td>{{item.id}}</td>
             <td class="nombreCompleto">{{item.nombre}}</td>
             <td>{{item.cuit}}</td>
@@ -17,10 +17,18 @@
             <td>{{item.activo}}</td>
             <td>
                 
-                 <div><button (click)="borrarPersona(item)" class="btn btn-danger">deshabilitar</button></div>
+            <div><button (click)="borrarPersona(item)" class="btn btn-danger">deshabilitar</button></div>
                  
             
             </td>
         </tr>
     </table>
+
+    <div class="pageCmd">
+
+        <pagination-controls (pageChange)="page=$event" previousLabel="Anterior" nextLabel="Siguiente"> </pagination-controls>
+       
+       
+    </div>
+    
 </div>

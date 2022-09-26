@@ -10,6 +10,7 @@ export class PersonasService {
   plantel: Persona[];
   uri: string = 'https://citenik-nodocker.azurewebsites.net/api/clientes';
   
+
   constructor(public http: HttpClient) {
     this.plantel = [];
   }
@@ -38,10 +39,12 @@ export class PersonasService {
   cantidad() {
     return this.plantel.length;
   }
+  
 
-  obtenerTodas(): Observable<any> {
+  obtenerTodas(page:number=0): Observable<any> {
     //return this.plantel;
-    return this.http.get(this.uri);
+  
+    return this.http.get(`${this.uri}/`);
   }
 
   obtenerUna(id: number): Observable<any> {

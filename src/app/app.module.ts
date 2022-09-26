@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AltaPersonaComponent } from './alta-persona/alta-persona.component';
 import { ListaPersonasComponent } from './lista-personas/lista-personas.component';
 import {HttpClientModule} from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination'
 
 import { AppRoutingModule } from './app-routing.module';
 import { PlanesComponent } from './planes/planes.component';
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

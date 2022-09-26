@@ -5,3 +5,13 @@
 .titulosTabla{
     text-transform: uppercase ;
 }
+
+.pageCmd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageBtn{
+    margin:2px 28px
+}

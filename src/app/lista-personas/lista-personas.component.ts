@@ -13,6 +13,8 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
   personaEncontrada: any;
   private subs: Subscription;
 
+  public page!:number
+
   constructor(public personaServe: PersonasService) {
     this.subs = new Subscription();
   }
