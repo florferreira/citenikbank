@@ -1,7 +1,13 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Persona } from '../model/persona';
 import { PersonasService } from '../services/personas.service';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatSort} from '@angular/material/sort'
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-lista-personas',
@@ -15,7 +21,10 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
 
   public page!:number
 
-  constructor(public personaServe: PersonasService) {
+  filterPost:any=''
+  
+
+  constructor(public personaServe: PersonasService, public router:Router) {
     this.subs = new Subscription();
   }
 
@@ -29,6 +38,7 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
           alert('Error al obtener el listado de personas');
         },
       })
+
     );
   }
   
@@ -50,4 +60,12 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
       );
     }
   }
+
+  editar(id:string){
+    
+    this.router.navigate([`editarClientes/${id}`]);
+   
+  }
+
+ 
 }

@@ -5,11 +5,15 @@ import { AppComponent } from './app.component';
 import { AltaPersonaComponent } from './alta-persona/alta-persona.component';
 import { ListaPersonasComponent } from './lista-personas/lista-personas.component';
 import {HttpClientModule} from '@angular/common/http';
-import {NgxPaginationModule} from 'ngx-pagination'
+import {NgxPaginationModule} from 'ngx-pagination';
+import { FilterPipe } from 'src/pipes/filter.pipe'; 
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { PlanesComponent } from './planes/planes.component';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditarClientesComponent } from './editar-clientes/editar-clientes.component';
 
 
 @NgModule({
@@ -18,7 +22,9 @@ import { LoginComponent } from './login/login.component';
     AltaPersonaComponent,
     ListaPersonasComponent,
     PlanesComponent,
-    LoginComponent
+    LoginComponent,
+    FilterPipe,
+    EditarClientesComponent
     
   ],
   imports: [
@@ -27,7 +33,9 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { ListaPersonasComponent } from '../../lista-personas/lista-personas.comp
 import { AltaPersonaComponent } from '../../alta-persona/alta-persona.component';
 import { PlanesComponent } from '../../planes/planes.component';
 import { LoginComponent } from '../../login/login.component';
+import { EditarClientesComponent } from '../../editar-clientes/editar-clientes.component';
 
 
 const routes:Routes=[
@@ -15,6 +16,7 @@ const routes:Routes=[
     {path:'altapersonas',component:AltaPersonaComponent},
     {path:'planes',component:PlanesComponent},
     {path:'login',component:LoginComponent},
+    {path:'editarClientes/:id',component: EditarClientesComponent},
     {path:'**',redirectTo:'listadoclientes'}
     
 

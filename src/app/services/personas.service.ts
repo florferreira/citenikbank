@@ -50,4 +50,11 @@ export class PersonasService {
   obtenerUna(id: number): Observable<any> {
     return this.http.get(`${this.uri}/${id}`);
   }
+
+  modificarCliente(cliente: Persona):Observable<Persona>{
+    return this.http.put<Persona>(`${this.uri}/${cliente.id}`,cliente);
+  }
+
+ 
+  
 }

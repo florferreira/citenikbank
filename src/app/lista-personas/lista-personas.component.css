@@ -15,3 +15,15 @@
 .pageBtn{
     margin:2px 28px
 }
+
+.buscador{
+    display:flex;
+   justify-content: center;
+   align-content: center;
+   margin: 45px 0px;
+}
+
+.inputBuscar{
+    margin-left: 35px;
+    width: 200%;
+}
