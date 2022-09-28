@@ -4,6 +4,13 @@
 
 .titulosTabla{
     text-transform: uppercase ;
+    font-size: 17px;
+ 
+}
+
+.contenidoTabla{
+    font-size: 15px;
+    
 }
 
 .pageCmd{
@@ -16,14 +23,32 @@
     margin:2px 28px
 }
 
+.alignCenter{
+    text-align: center;
+}
+
 .buscador{
     display:flex;
-   justify-content: center;
-   align-content: center;
-   margin: 45px 0px;
+    justify-content:center;
+    align-content: center;
+    margin: 45px 0px;
 }
 
 .inputBuscar{
     margin-left: 35px;
     width: 200%;
+}
+
+.botonesCliente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnCliente{
+    margin:0px 15px;
+    min-width: 110px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
 }

@@ -1,7 +1,7 @@
 <div class=" container container-fluid buscador">
-    <h1 class="titulosTabla">Búsqueda clientes</h1>
+    <h2 class="titulosTabla">Búsqueda clientes</h2>
 
-    <div class="form-group">
+    <div class="form-group titulosTabla">
         <input
          type="text"
          class="forms-control inputBuscar "
@@ -21,22 +21,23 @@
         <tr class="titulosTabla">
             <th>id</th>
             <th >Nombre Completo</th>
-            <th >cuit</th>
-            <th>Fecha de nacimiento</th>
-            <th>activo</th>
+            <th class="alignCenter">cuit</th>
+            <th class="alignCenter">Fecha de nacimiento</th>
+            <th class="alignCenter">activo</th>
             <th></th>
         </tr>
-        <tr  *ngFor="let item of personaServe.plantel | filter:filterPost | paginate:{ itemsPerPage:20,currentPage:page}  " >
+        <tr  *ngFor="let item of personaServe.plantel | filter:filterPost | paginate:{ itemsPerPage:20,currentPage:page} " class="contenidoTabla" >
             <td>{{item.id}}</td>
             <td class="nombreCompleto">{{item.nombre}}</td>
-            <td>{{item.cuit}}</td>
-            <td>{{item.fechaNacimiento |date:'dd/MM/yyyy'}}</td>
-            
-            <td>{{item.activo}}</td>
+            <td class="alignCenter">{{item.cuit}}</td>
+            <td class="alignCenter">{{item.fechaNacimiento |date:'dd/MM/yyyy'}}</td>
+            <td class="alignCenter">{{item.activo}}</td>
             <td>
-                
-            <div><button (click)="borrarPersona(item)" class="btn btn-danger">deshabilitar</button></div>
-            <div><button  class="btn btn-success" (click)="editar(item.id)">editar</button></div>
+              
+                <div class="botonesCliente">
+                    <div><button (click)="borrarPersona(item)" class="btn btn-danger btnCliente">deshabilitar</button></div>
+                    <div><button  class="btn btn-success btnCliente" (click)="editar(item.id)">editar</button></div>
+                </div>
     
             
             </td>
