@@ -22,6 +22,7 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
   public page!:number
 
   filterPost:any=''
+ 
   
 
   constructor(public personaServe: PersonasService, public router:Router) {
@@ -62,10 +63,9 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
   }
 
   editar(id:string){
-    
     this.router.navigate([`editarClientes/${id}`]);
-   
   }
+
 
  
 }

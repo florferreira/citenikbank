@@ -7,6 +7,7 @@ import { ListaPersonasComponent } from './lista-personas/lista-personas.componen
 import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FilterPipe } from 'src/pipes/filter.pipe'; 
+import { SortPipe } from 'src/pipes/sort.pipe'; 
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +25,9 @@ import { EditarClientesComponent } from './editar-clientes/editar-clientes.compo
     PlanesComponent,
     LoginComponent,
     FilterPipe,
-    EditarClientesComponent
+    EditarClientesComponent,
+    SortPipe
+    
     
   ],
   imports: [

@@ -17,16 +17,19 @@
 
 
 <div class="mt-3 container container-fluid">
+    
+    
     <table class="table table-bordered" *ngIf="personaServe.cantidad() > 0">
-        <tr class="titulosTabla">
-            <th>id</th>
+        <tr class="titulosTabla" >
+           
+            <th >id</th>
             <th >Nombre Completo</th>
             <th class="alignCenter">cuit</th>
             <th class="alignCenter">Fecha de nacimiento</th>
             <th class="alignCenter">activo</th>
             <th></th>
         </tr>
-        <tr  *ngFor="let item of personaServe.plantel | filter:filterPost | paginate:{ itemsPerPage:20,currentPage:page} " class="contenidoTabla" >
+        <tr  *ngFor="let item of personaServe.plantel | filter:filterPost | paginate:{ itemsPerPage:20,currentPage:page }" class="contenidoTabla" >
             <td>{{item.id}}</td>
             <td class="nombreCompleto">{{item.nombre}}</td>
             <td class="alignCenter">{{item.cuit}}</td>
