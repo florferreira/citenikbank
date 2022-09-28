@@ -1,0 +1,12 @@
+.titulosTabla{
+    text-transform: uppercase ;
+    font-size: 17px;
+}
+
+.contenidoTabla{
+    font-size: 15px; 
+}
+
+.alignCenter{
+    text-align: center;
+}

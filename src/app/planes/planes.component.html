@@ -3,22 +3,22 @@
     <table class="table">
         <thead >
           <tr class="titulosTabla">
-            <th scope="col">ID</th>
-            <th scope="col">PLAN</th>
-            <th scope="col">TNA</th>
-            <th scope="col">DURACION MINIMA CUOTAS</th>
-            <th scope="col">vigencia</th>
+            <th class="titulosTabla" scope="col">ID</th>
+            <th class="titulosTabla" scope="col">PLAN</th>
+            <th class="titulosTabla alignCenter" scope="col">TNA</th>
+            <th class="titulosTabla alignCenter" scope="col">DURACION MINIMA CUOTAS</th>
+            <th class="titulosTabla alignCenter" scope="col">vigencia</th>
           </tr>
         </thead>
         <tbody >
           
 
-         <tr *ngFor="let plan of planesService.planesList">
+         <tr *ngFor="let plan of planesService.planesList" class="contenidoTabla">
             <th scope="row"> {{plan.id}} </th>
             <td class="nombreCompleto"> {{plan.nombre}}</td>
-            <td>{{plan.tna}}</td>
-            <td>{{plan.duracionMinimaCuotas}} </td>
-            <td>{{plan.vigencia}} </td>
+            <td class="alignCenter">{{plan.tna}} %</td>
+            <td class="alignCenter">{{plan.duracionMinimaCuotas}} meses </td>
+            <td class="alignCenter">{{plan.vigencia}} </td>
          </tr>
           
 
